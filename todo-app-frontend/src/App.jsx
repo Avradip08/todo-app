@@ -14,7 +14,7 @@ export default function App() {
   }, []);
   
   function getTodos(){
-    fetch("http://localhost:3000/todos", {
+    fetch("https://todo-backend-service-j4x3.onrender.com/todos", {
       method: "GET"
     }).then((response) => {
       response.json().then((data) => {
@@ -23,7 +23,7 @@ export default function App() {
     });
   }
   function addTodo(title,description) {
-    fetch("http://localhost:3000/todos", {
+    fetch("https://todo-backend-service-j4x3.onrender.com/todos", {
         method: "POST",
         body: JSON.stringify({
           title: title,
@@ -39,7 +39,7 @@ export default function App() {
 
   function updateTodo(id,title,description) {
     fetch(
-      `http://localhost:3000/todos/${id}`, {
+      `https://todo-backend-service-j4x3.onrender.com/todos/${id}`, {
       method: "PUT",
       body: JSON.stringify({
         title: title,
@@ -55,7 +55,7 @@ export default function App() {
 
   function deleteTodo(id) {
     fetch(
-      `http://localhost:3000/todos/${id}`, {
+      `https://todo-backend-service-j4x3.onrender.com/todos/${id}`, {
       method: "DELETE",
       headers: {
           "Content-Type": "application/json"
