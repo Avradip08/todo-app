@@ -1,12 +1,29 @@
 import logo from './logo.svg';
 import './App.css';
 
-function App() {
+export default function App() {
   return (
-    <div>
-      <h1>Hello World</h1>
+    <>
+      <addTodo></addTodo>  
+    </>
+  );
+}
+
+
+function addTodo() {
+  return (
+    <div class="container">
+        <form onsubmit="handleSubmit(event)">
+            <input type="text" id="title" placeholder="Title"></input>
+            <br></br>
+            <input type="text" id="description" placeholder="Description"></input>
+            <br></br>
+            <button>Submit</button>
+        </form>
     </div>
   );
 }
 
-export default App;
+function listTodos() {
+  
+}
