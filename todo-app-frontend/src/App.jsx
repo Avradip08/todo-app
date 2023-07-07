@@ -11,6 +11,10 @@ export default function App() {
 
   React.useEffect(() => {
     getTodos();
+  //fetching todos every 5 seconds in order to keep the app responsive across sessions
+    setInterval(()=>{
+        getTodos();
+    },5000);
   }, []);
   
   function getTodos(){
